@@ -1,0 +1,46 @@
+[
+    {
+        "name": "yellow marigold",
+        "sun": 5,
+        "soil": 3,
+        "water": 5,
+        "perinnial": true,
+        "bloom_period": "spring",
+        "height": 2,
+        "color": "yellow",
+        "img_1_url": "https://www.neseed.com/wp-content/uploads/2017/02/14210-Yellow-Antigua-Marigold.jpg"
+  },
+  {
+      "name": "southern magnolia",
+      "sun": 5,
+      "soil": 5,
+      "water": 3,
+      "perinnial": true,
+      "bloom_period": "summer",
+      "height": 40,
+      "color": "white",
+      "img_1_url": "https://americanheritagetrees.org/wp-content/uploads/2016/10/magnolia-opt-Fotolia_115462761_XS.jpg"
+  },
+  {
+      "name": "hosta 'patriot'",
+      "sun": 1,
+      "soil": 3,
+      "water": 3,
+      "perinnial": true,
+      "bloom_period": "summer",
+      "height": 2,
+      "color": "white",
+      "img_1_url": "https://bluestoneperennials.global.ssl.fastly.net/img/HOPA/650/HOPA_0_Hosta_Patriot.1491332473.jpg"
+    },
+    {
+        "name": "hosta 'golden scepter'",
+        "sun": 1,
+        "soil": 3,
+        "water": 3,
+        "perinnial": true,
+        "bloom_period": "summer",
+        "height": 2,
+        "color": "white",
+        "img_1_url": "https://garden.org/pics/2014-06-06/Anne/f0db65.jpg"
+  }
+]

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sun: 1
+  soil: 1
+  water: 1
+  perinnial: false
+  bloom_period: MyString
+  height: 1
+  color: MyString
+
+two:
+  name: MyString
+  sun: 1
+  soil: 1
+  water: 1
+  perinnial: false
+  bloom_period: MyString
+  height: 1
+  color: MyString

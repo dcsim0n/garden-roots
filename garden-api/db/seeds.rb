@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'json'
+Plant.destroy_all
+
+seeds = File.read('./db/plants.json')
+
+plants = JSON.parse(seeds)
+
+plants.each { |plant| Plant.create(plant) }
