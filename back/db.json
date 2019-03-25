@@ -1,0 +1,50 @@
+{
+  "beds": [
+    {
+      "name": "Front Yard Island",
+      "soil": "top",
+      "sun": "full",
+      "plants": [],
+      "id": 1
+    }
+  ],
+  "plants": [
+      {
+          "name": "yellow marigold",
+          "sun": "full",
+          "water_use": "high",
+          "soil_types": "all",
+          "bloom_period": "Spring",
+          "height": "2ft",
+          "id": 1
+    },
+    {
+        "name": "southern magnolia",
+        "sun": "full",
+        "water_use": "average",
+        "height": "40ft",
+        "bloom_period": "summer",
+        "soil_types": "all",
+        "id": 2
+    },
+    {
+        "name": "hosta 'patriot'",
+        "sun": "shade",
+        "water_use": "average",
+        "height": "2ft",
+        "bloom_period": "summer",
+        "soil_types": "top",
+        "id": 3
+    },
+    {
+        "name": "hosta 'golden scepter'",
+        "sun": "shade",
+        "water_use": "average",
+        "height": "2ft",
+        "bloom_period": "summer",
+        "soil_types": "top",
+        "id": 4
+    }
+  ],
+  "bedplants": []
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Garden Roots Home</title>
+    <script src="src/fetch.js"></script>
+    <script src="src/index.js"></script>
+</head>
+<body>
+    <div id="main">
+        <!-- Garden Beds list goes here -->
+    </div>
+    <div id="new-bed">
+        <form action="#" method="get" id="new-form">
+            <label for="name">Describe your Flower Bed:</label> <br>
+            <input type="text" name="name" id="name"> <br>
+            <label for="sun">How much sun does it get?</label> <br>
+            <select name="sun" id="sunlight"> <br>
+                <option value="full">Full Sun</option>
+                <option value="part">Partly Sunny</option>
+                <option value="shade">Fully Shaded</option>
+            </select> <br>
+            <label for="soil">What type of soil?</label> <br>
+            <select name="soil" id="soil">
+                <option value="clay">Clay Like</option>
+                <option value="sand">Sandy Soil</option>
+                <option value="top">Top Soil</option>
+            </select> <br>
+            <input type="submit" value="Create New Bed">
+        </form>
+    </div>
+</body>
+</html>
