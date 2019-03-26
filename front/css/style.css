@@ -1,0 +1,19 @@
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+    width: 60em;
+    text-align: center;
+}
+
+.bed {
+    text-align: left;
+    border: 1px solid green;
+    width: 14em;
+}
+
+#paper {
+    border: 1px solid blue;
+    margin-left: auto;
+    margin-right: auto;
+}

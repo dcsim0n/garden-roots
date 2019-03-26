@@ -47,6 +47,7 @@ class GardenBed{
         bedElements.soil.innerHTML = this.soil_str
 
         beddiv.id = `garden-bed-${this.id}`
+        beddiv.className = "bed"
 
         for(let element in bedElements){
             beddiv.appendChild(bedElements[element])
