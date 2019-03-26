@@ -15,6 +15,13 @@ class GardenBedsController < ApplicationController
         render json: @beds, status: :ok
     end
 
+    def show
+        @bed = GardenBed.find(params[:id])
+        #The show route will return detials about the bed,
+        #More importantly will return all associated plants
+        render json: @bed.to_json(include: :plants), status: :ok
+    end
+
     private
     def bed_params
         params.permit(["name", "sun", "soil"])
