@@ -7,6 +7,7 @@ class GardenBed{
             soil
         })
     }
+    
 
     get sun_str(){
         switch (this.sun) {
