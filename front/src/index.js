@@ -2,11 +2,11 @@ const BEDS_URL = "http://localhost:3000/garden_beds"
 
 document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")
-    const paperCanvas = document.getElementById("paper")
+    const canvas = document.getElementById("paper")
     newForm.addEventListener("submit", handleBedForm)
 
     
-    BedController.initCanvas(paperCanvas)
+    BedController.initCanvas(canvas)
     renderBeds()
 
 })

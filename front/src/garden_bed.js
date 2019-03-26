@@ -6,6 +6,23 @@ class GardenBed{
             sun,
             soil
         })
+        const center = new paper.Point(Math.random() * 700, Math.random() * 500)
+        this.shape = new paper.Shape.Circle(center,50)
+        this.shape.strokeColor = "black"
+        this.shape.fillColor = "white"
+        
+        this.title = new paper.PointText({
+            point: center,
+            content: name,
+            fillColor: 'black',
+            fontFamily: 'Georgia',
+            fontSize: 18
+        })
+        //Center the title around the shape
+        this.title.position = this.title.position.add([-(this.title.bounds.width/2),-55]) 
+        
+        //Group everything here
+        this.group = new paper.Group([this.title,this.shape])
     }
     
 
@@ -56,4 +73,5 @@ class GardenBed{
 
         return beddiv
     }
+
 }

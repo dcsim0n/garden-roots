@@ -10,27 +10,10 @@ const BedController = {
         paper.view.draw()
     },
     addBed : function (bed) {
+        this.beds.push(bed)
         console.log("new bed...")
-        const center = new paper.Point(Math.random() * 700, Math.random() * 500)
-        const bedShape = new paper.Shape.Circle(center,50)
         
-        const title = new paper.PointText({
-            point: center,
-            content: bed.name,
-            fillColor: 'black',
-            fontFamily: 'Georgia',
-            fontSize: 18
-        })
-        //Center the title around the shape
-        title.position = title.position.add([-(title.bounds.width/2),-55]) 
-        
-        //Group everything here
-        const bedGroup = new paper.Group([bedShape,title])
-        bedShape.strokeColor = "black"
-        bedShape.fillColor = "white"
-        bedGroup.onMouseDrag = (e)=>this.dragBed(e)
-        
-        
+        bed.group.onMouseDrag = this.dragBed
     },
 
     dragBed : function(event){
