@@ -1,7 +1,6 @@
 class Plant {
-    constructor(id, name, sun, soil, water, perinnial, bloom_period, height, color) {
+    constructor(name, sun, soil, water, perinnial, bloom_period, height, color) {
 
-        this.id = id
         this.name = name 
         this.sun = sun
         this.soil = soil
@@ -13,21 +12,11 @@ class Plant {
     }
 
     get plantSuggestions() {
-        const plantSuggestions = document.getElementsById("new-suggestions")
-        const newPlantSuggestions = document.createElement("ul")
-        const plantList = doucment.createElement("li")
-            
-        plantSuggestions.appendChild(newPlantSuggestions)
-        newPlantSuggestions.appendChild(plantList)
+        const ul = document.createElement("ul")
+        document.getElementById("new-suggestions").appendChild(ul)
 
-        plantSuggestions.id = `${this.id}`
-
-        return plantSuggestions
+        const li = document.createElement("li")
+        ul.appendChild(li)
     }
-
-    //fetch to suggest route - bed id
-        // garden/beds/id
+        
 }
-
-// -plant class to get innerHTML to load
-// -displays suggestion
