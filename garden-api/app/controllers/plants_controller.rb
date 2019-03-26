@@ -5,4 +5,9 @@ class PlantsController < ApplicationController
 
         render json: @plants, status: :ok
     end
+    def show
+        @plant = Plant.find(params[:id])
+        #FIX-ME: Should a plant return all beds asscociated with it?
+        render json: @plants, status: :ok
+    end
 end
