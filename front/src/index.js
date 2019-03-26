@@ -1,8 +1,28 @@
+const BEDS_URL = "http://localhost:3000/garden_beds"
+
 document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")
     newForm.addEventListener("submit", handleBedForm)
+
+    renderBeds()
+
 })
-const BEDS_URL = "http://localhost:3000/beds"
+
+function renderBeds() {
+    fetchAll(BEDS_URL,(data)=>{
+        data.forEach((bed)=>{
+            newBed = new GardenBed(bed)
+            renderBed(newBed)
+
+        })
+    })
+}
+
+function renderBed(bed){
+    const mainDiv = document.getElementById("main")
+    mainDiv.appendChild(newBed.bedDiv)
+}
+
 function handleBedForm(event) {
     console.log("Building a new flower bed...")
     event.preventDefault()
@@ -15,8 +35,9 @@ function handleBedForm(event) {
         plants: []
     })
 
-    postOne(BEDS_URL,bedObj,(resp)=>{
-        console.log(resp.status)
+    postOne(BEDS_URL,bedObj,(data)=>{
+        newBed = new GardenBed(data)
+        renderBed(newBed)
     })
 
 }

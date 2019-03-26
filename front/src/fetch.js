@@ -18,9 +18,10 @@ function postOne(URL,data,callback){
         body: JSON.stringify(data)
     }).then(resp =>{
         if(resp.ok){
-            callback(resp)
+            return resp.json()
         }
-    }).catch(error => console.log(error))
+    }).then(data => callback(data))
+    .catch(error => console.log(error))
 }
 
 function patchOne(URL,id, data, callback){
