@@ -11,6 +11,39 @@
         "img_1_url": "https://www.neseed.com/wp-content/uploads/2017/02/14210-Yellow-Antigua-Marigold.jpg"
   },
   {
+    "name": "Overture Chrysanthemum",
+    "sun": 5,
+    "soil": 3,
+    "water": 4,
+    "perinnial": true,
+    "bloom_period": "fall",
+    "height": 2,
+    "color": "red",
+    "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1523040105-ec4c096d7e8bdde6a/Chrysanthemum%20'Overture'Optimized.jpg"
+    },
+    {
+        "name": "Trumpet Daffodil",
+        "sun": 5,
+        "soil": 3,
+        "water": 3,
+        "perinnial": true,
+        "bloom_period": "spring" ,
+        "height": 2 ,
+        "color": "yellow" ,
+        "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1536765992-43898be4db6f400c5/narcissus%20Dutch%20Master2Optimized.jpg"
+    },
+    {
+        "name": "New York Asters",
+        "sun": 5,
+        "soil": 4,
+        "water":  2,
+        "perinnial": true,
+        "bloom_period":"fall",
+        "height": 3 ,
+        "color": "purple",
+        "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1457630482-baa517c58905d9a8d/DP5440%20Aster%20Fellowship.jpg"
+    },
+  {
       "name": "southern magnolia",
       "sun": 5,
       "soil": 5,
@@ -22,6 +55,62 @@
       "img_1_url": "https://americanheritagetrees.org/wp-content/uploads/2016/10/magnolia-opt-Fotolia_115462761_XS.jpg"
   },
   {
+    "name": "Catherine Woodbury Daylilly",
+    "sun": 3,
+    "soil": 5,
+    "water": 3,
+    "perinnial": true,
+    "bloom_period": "summer",
+    "height": 2,
+    "color": "purple",
+    "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1430168904-e2e115ab03fcd98d2/0219133.jpg"
+    },
+    {
+        "name": "Gardenia Jasminoides",
+        "sun": 3,
+        "soil": 4,
+        "water": 3,
+        "perinnial": true,
+        "bloom_period": "summer",
+        "height": 5,
+        "color": "white",
+        "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1430168904-e2e115ab03fcd98d2/0219133.jpg"
+    },
+    {
+        "name": "Japanese Mapel" ,
+        "sun": 3,
+        "soil": 4 ,
+        "water": 3,
+        "perinnial": true,
+        "bloom_period": "fall",
+        "height": 10,
+        "color": "red",
+        "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1477073483-073d1aed65988fb11/DP9323%20Acer%20palmatum%20Elegans.jpg"
+    },
+    {
+        "name": "Royal Azalea",
+        "sun": 3,
+        "soil": 3,
+        "water": 3,
+        "perinnial": true,
+        "bloom_period": "spring",
+        "height": 5,
+        "color": "pink",
+        "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1444914700-fed3275476545ad26/6662241_m.jpg"
+    },
+    {
+        "name": "Ramapo Rhododendron",
+        "sun": 3,
+        "soil": 4,
+        "water": 3,
+        "perinnial": true,
+        "bloom_period": "spring",
+        "height": 3,
+        "color": "purple",
+        "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1446413869-7ea05d9195356248b/Rhododendron%20Ramapo.jpg"
+    },
+
+    {
       "name": "hosta 'patriot'",
       "sun": 1,
       "soil": 3,
@@ -42,5 +131,16 @@
         "height": 2,
         "color": "white",
         "img_1_url": "https://garden.org/pics/2014-06-06/Anne/f0db65.jpg"
-  }
+  },
+  {
+    "name": "ostrich fern",
+    "sun": 1,
+    "soil": 4,
+    "water": 4,
+    "perinnial": true,
+    "bloom_period": "none",
+    "height": 5,
+    "color": "green",
+    "img_1_url": "https://www.gardenia.net/rendition.slider_detail/uploads/plant/1505503322-86991cdc6c8779bf0/Matteucia3.jpg"
+}
 ]
