@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     newForm.addEventListener("submit", handleBedForm)
 
     renderBeds()
-
 })
 
+    
 function renderBeds() {
     fetchAll(BEDS_URL,(data)=>{
         data.forEach((bed)=>{
@@ -40,6 +40,11 @@ function handleBedForm(event) {
         renderBed(newBed)
     })
 
+    function renderSuggestions() {
+        fetch('http://localhost:3000/plants')
+        .then(res => res.json())
+        .then(console.log)
+    }
 }
 
 
