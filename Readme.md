@@ -16,6 +16,9 @@ A web app that will allow users create garden beds based on the various planting
 * Plants
 
 ## Start the App
-1. `rails s` inside the garden-api folder
-2. open `index.html` 
-3. get creative
+1. `bundle` to install dependencies
+2. `rails db:migrate` to create database
+3. `rals db:seed` to build  plants table
+4.`rails s` inside the garden-api folder
+5. open `index.html` 
+6. get creative
