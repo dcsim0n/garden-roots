@@ -15,3 +15,7 @@ A web app that will allow users create garden beds based on the various planting
 * Bed Plants
 * Plants
 
+## Start the App
+1. `rails s` inside the garden-api folder
+2. open `index.html` 
+3. get creative
