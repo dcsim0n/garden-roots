@@ -6,10 +6,12 @@ class GardenBed{
             sun,
             soil
         })
-        const center = new paper.Point(Math.random() * 700, Math.random() * 500)
+        const center = paper.view.center
         this.shape = new paper.Shape.Circle(center,50)
         this.button = new paper.Raster("https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/add-circle-green-512.png",center.add([40,40]))
+        this.deleteBtn = new paper.Raster("https://cdn1.iconfinder.com/data/icons/color-bold-style/21/05-512.png",center.add([-40,40]))
         this.button.scale(.05)
+        this.deleteBtn.scale(.055)
         this.shape.strokeColor = "black"
         this.shape.fillColor = "white"
         
@@ -24,7 +26,10 @@ class GardenBed{
         this.title.position = this.title.position.add([-(this.title.bounds.width/2),-55]) 
         
         //Group everything here
-        this.group = new paper.Group([this.title,this.shape,this.button])
+        this.group = new paper.Group([this.title,this.shape,this.button,this.deleteBtn])
+
+        //Wrap handler in arrow function so we access the garden_bed ID
+        this.deleteBtn.onMouseUp = (e)=>{this.handleDelete(e)}
     }
     
 
@@ -52,6 +57,13 @@ class GardenBed{
             default:
                 return "Unknown"
         }
+    }
+
+    handleDelete(event){
+        event.target.parent.remove()
+        deleteOne(BEDS_URL, this.id, ()=>{console.log("delteted")})
+        
+
     }
 
     get bedDiv(){
