@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Garden Roots Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="node_modules/paper/dist/paper-full.js"></script>
     <script src="src/fetch.js"></script>
     <script src="src/garden_bed.js"></script>
+    <script type="text/javascript" src="./src/bed_controller.js"></script>
     <script src="src/index.js"></script>
     <script src="src/plant.js"></script>
 </head>
 <body>
     <div id="main">
         <!-- Garden Beds list goes here -->
+        <canvas id="paper" width="800px", height="600px">
+
+        </canvas>
     </div>
     <div id="new-bed">
         <form action="#" method="get" id="new-form">

@@ -1,0 +1,15 @@
+{
+  "name": "garden_roots",
+  "version": "1.0.0",
+  "description": "Front end portion of the garden roots application",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node index.js"
+  },
+  "author": "Dana Simmons & Cat Grayson",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "paper": "^0.12.0"
+  }
+}
