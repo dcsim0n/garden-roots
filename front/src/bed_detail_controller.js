@@ -12,6 +12,11 @@ function fetchBedDetails() {
 //show larger representation of selected bed
         //paper.js function of secondLayer
 
+function openSecondLayer() {
+    fetchBedDetails()
+    let bedPath = new paper.Path.Rectangle(new Size.max())
+}
+
 //show side menu of suggested plants by picture and name
 
 //add mouse event(hover over picture?) to show plant details(color?, height?)
@@ -26,6 +31,16 @@ function fetchBedDetails() {
 
 //POST will autosave to database
 //(x) button to close and return to all beds view
+    function handleClose() {
+        const paper = document.getElementById("paper")
+        const closeButton = document.createElement("button")
+        closeButton.innerHTML = "X"
+
+        closeButton.addEventListener("click", event => {
+
+        })
+
+    }
 
 layers = []
 
