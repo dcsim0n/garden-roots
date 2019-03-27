@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")
     const canvas = document.getElementById("paper")
     newForm.addEventListener("submit", handleBedForm)
-
     
     BedController.initCanvas(canvas)
     renderBeds()
