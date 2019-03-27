@@ -39,6 +39,8 @@ function handleBedForm(event) {
     postOne(BEDS_URL,bedObj,(data)=>{
         newBed = new GardenBed(data)
         renderBed(newBed)
+
+        //Hide the popover when we are done
         document.getElementById("new-bed").hidden = true
     })
 

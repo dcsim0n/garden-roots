@@ -5,6 +5,8 @@ const BedController = {
         paper.setup(this.canvas)
         paper.view.draw()
         const newBedButton = new paper.Group([
+
+        //Make a button to click for new beds
         new paper.Shape.Rectangle({
                                     point:[0,0],
                                     size:[100,30],
