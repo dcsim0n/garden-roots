@@ -14,6 +14,7 @@ const BedController = {
         console.log("new bed...")
         
         bed.group.onMouseDrag = this.dragBed
+        bed.button.onMouseUp = this.openDetail
     },
 
     dragBed : function(event){
@@ -21,6 +22,18 @@ const BedController = {
         event.target.setPosition(newPoint)
         
         //
+    },
+
+    openDetail: function (event) {
+        console.log("clickgin")
+        const detailBox = new paper.Shape.Rectangle({
+            point: [20,20],
+            size: [760,540],
+            strokeColer: "black",
+            fillColer: "white"
+        })
+        const detailLayer = new paper.Layer([detailBox])
+        detailLayer.bringToFront()
     }
 
 }

@@ -8,6 +8,8 @@ class GardenBed{
         })
         const center = new paper.Point(Math.random() * 700, Math.random() * 500)
         this.shape = new paper.Shape.Circle(center,50)
+        this.button = new paper.Raster("https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/add-circle-green-512.png",center.add([40,40]))
+        this.button.scale(.05)
         this.shape.strokeColor = "black"
         this.shape.fillColor = "white"
         
@@ -22,7 +24,7 @@ class GardenBed{
         this.title.position = this.title.position.add([-(this.title.bounds.width/2),-55]) 
         
         //Group everything here
-        this.group = new paper.Group([this.title,this.shape])
+        this.group = new paper.Group([this.title,this.shape,this.button])
     }
     
 
