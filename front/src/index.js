@@ -39,6 +39,7 @@ function handleBedForm(event) {
     postOne(BEDS_URL,bedObj,(data)=>{
         newBed = new GardenBed(data)
         renderBed(newBed)
+        document.getElementById("new-bed").hidden = true
     })
 
     function renderSuggestions() {
