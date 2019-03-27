@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")
     const canvas = document.getElementById("paper")
     newForm.addEventListener("submit", handleBedForm)
-
     
     BedController.initCanvas(canvas)
     renderBeds()
@@ -40,6 +39,9 @@ function handleBedForm(event) {
     postOne(BEDS_URL,bedObj,(data)=>{
         newBed = new GardenBed(data)
         renderBed(newBed)
+
+        //Hide the popover when we are done
+        document.getElementById("new-bed").hidden = true
     })
 
     function renderSuggestions() {
