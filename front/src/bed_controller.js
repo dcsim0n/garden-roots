@@ -5,6 +5,9 @@ const BedController = {
         paper.setup(this.canvas)
         paper.view.draw()
 
+        paper.view.onFrame = (e)=>{this.spinBeds(e)}
+
+
     },
     draw : function(){
         paper.view.draw()
@@ -37,6 +40,12 @@ const BedController = {
         
         //
     },
+
+    spinBeds(event){
+        this.beds.forEach((bed)=>{
+            bed.group.rotate(1)
+        })
+    }
 
     
 
