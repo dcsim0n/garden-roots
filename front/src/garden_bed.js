@@ -1,10 +1,11 @@
 class GardenBed{
-    constructor({id, name, sun, soil}){
+    constructor({id, name, sun, soil, plants}){
         Object.assign(this, {
             id,
             name,
             sun,
-            soil
+            soil,
+            plants
         })
         this.container = document.createElement("div"),
         this.elements = {
@@ -17,10 +18,15 @@ class GardenBed{
         
         //Configure elements here
         this.elements.h.innerHTML = this.name
+
         this.elements.sun.innerHTML = this.sun_str
+
         this.elements.soil.innerHTML = this.soil_str
+
         this.elements.button.innerText = "View Details"
         this.elements.button.dataset.id = this.id
+
+        //Maybe display number of plants
         //this.elements.numOfPlants.innerHTML 
 
         this.container.id = `garden-bed-${this.id}`
@@ -30,7 +36,7 @@ class GardenBed{
             this.container.appendChild(this.elements[element])
         }
 
-        //return beddiv
+        
 
     }
 

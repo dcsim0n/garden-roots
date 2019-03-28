@@ -1,5 +1,4 @@
 GardenBedDetails = {
-    bedObj: null,
 
     updateDetails: function(bedObj) {
         console.log(bedObj)
@@ -14,8 +13,21 @@ GardenBedDetails = {
         const sun = document.createElement("li") 
         sun.innerHTML = `Light Condition: ${bedObj.sun_str}`
         card.details.appendChild(sun)
-    },
 
+        //Iterate over the plants array
+        //and add a list item for each one
+        card.plants.innerHTML = ""
+        bedObj.plants.forEach(plant => {
+            this.addPlant(plant.name)
+        });
+        this.show()
+    },
+    addPlant: function(plantName){
+        const li = document.createElement("li")
+        li.innerHTML = plantName
+        const {plants} = this.querryShow()
+        plants.appendChild(li)
+    },
     querryShow: function() {
         const card = document.getElementById("show")
         return {
@@ -28,5 +40,11 @@ GardenBedDetails = {
     },
     close: function(){
         console.log("Closeing...")
+        const card = document.getElementById("show")
+        card.hidden = true
+    },
+    show: function () {
+        const card = document.getElementById("show")
+        card.hidden = false
     }
 }
