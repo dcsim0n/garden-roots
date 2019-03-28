@@ -1,4 +1,5 @@
 const BEDS_URL = "http://localhost:3000/garden_beds"
+
 let BEDS = []
 document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")

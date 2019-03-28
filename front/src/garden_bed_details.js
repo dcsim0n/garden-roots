@@ -18,18 +18,19 @@ GardenBedDetails = {
         //and add a list item for each one
         card.plants.innerHTML = ""
         bedObj.plants.forEach(plant => {
-            this.addPlant(plant.name)
+            this.addPlant(plant)
         });
         this.show()
     },
 
-    addPlant: function(plantName){
+    addPlant: function(plant){
         const deleteLink = document.createElement("button")
         deleteLink.innerText = "Remove"
-        deleteLink.onclick = ()=>{alert("Are you sure?")}
+        deleteLink.onclick = ()=>{this.removePlant(plant.id)}
+        deleteLink.dataset.id = plant.id
 
         const li = document.createElement("li")
-        li.innerHTML = plantName
+        li.innerHTML = plant.name
         li.append(document.createElement("br"))
         li.append(deleteLink)
         
@@ -45,6 +46,14 @@ GardenBedDetails = {
             plants: card.querySelector("#plants ul"),
             suggestionsButton: card.querySelector("#plants button"),
             graphics: card.querySelector("#graphics")
+        }
+    },
+
+    removePlant: function(id){
+        if(confirm("Are you sure?")){
+            //Got stuck because we don't have a GardenBedId
+            //May have to change the API to get this to work
+            
         }
     },
 
