@@ -6,6 +6,29 @@ class GardenBed{
             sun,
             soil
         })
+        this.container = document.createElement("div"),
+        this.elements = {
+            h: document.createElement("h3"),
+            sun: document.createElement("p"),
+            soil: document.createElement("p"),
+            numOfPlants: document.createElement("p")
+        }
+        
+        
+        this.elements.h.innerHTML = this.name
+        this.elements.sun.innerHTML = this.sun_str
+        this.elements.soil.innerHTML = this.soil_str
+        //this.elements.numOfPlants.innerHTML 
+
+        this.container.id = `garden-bed-${this.id}`
+        this.container.className = "bed"
+
+        for(let element in this.elements){
+            this.container.appendChild(this.elements[element])
+        }
+
+        //return beddiv
+
     }
 
     get sun_str(){
@@ -35,23 +58,6 @@ class GardenBed{
     }
 
     get bedDiv(){
-        const beddiv = document.createElement("div")
-        const bedElements = {
-        h: document.createElement("h3"),
-        sun: document.createElement("p"),
-        soil: document.createElement("p")
-        }
         
-        bedElements.h.innerHTML = this.name
-        bedElements.sun.innerHTML = this.sun_str
-        bedElements.soil.innerHTML = this.soil_str
-
-        beddiv.id = `garden-bed-${this.id}`
-
-        for(let element in bedElements){
-            beddiv.appendChild(bedElements[element])
-        }
-
-        return beddiv
     }
 }

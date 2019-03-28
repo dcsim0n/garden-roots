@@ -9,7 +9,10 @@
 .bed {
     text-align: left;
     border: 1px solid green;
+    display: inline-block;
     width: 14em;
+    margin: .2em;
+    padding: .2em;
 }
 
 #paper {

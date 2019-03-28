@@ -20,7 +20,7 @@ function renderBeds() {
 
 function renderBed(bed){
     const mainDiv = document.getElementById("main")
-    mainDiv.appendChild(newBed.bedDiv)
+    mainDiv.appendChild(newBed.container)
 }
 
 function handleBedForm(event) {
