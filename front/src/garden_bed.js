@@ -1,12 +1,14 @@
 class GardenBed{
-    constructor({id, name, sun, soil}){
+    constructor({id, name, sun, soil, plants}){
         Object.assign(this, {
             id,
             name,
             sun,
-            soil
+            soil,
+            plants
         })
         this.container = document.createElement("div"),
+        
         this.elements = {
             h: document.createElement("h3"),
             sun: document.createElement("p"),
@@ -17,11 +19,18 @@ class GardenBed{
         
         //Configure elements here
         this.elements.h.innerHTML = this.name
+
         this.elements.sun.innerHTML = this.sun_str
+
         this.elements.soil.innerHTML = this.soil_str
+
         this.elements.button.innerText = "View Details"
         this.elements.button.dataset.id = this.id
-        //this.elements.numOfPlants.innerHTML 
+
+        //Maybe display number of plants
+        //This requires a change in the API to return
+        //BedPlants with the get /garden_beds/index route
+        //this.elements.numOfPlants.innerHTML = this.plants.length
 
         this.container.id = `garden-bed-${this.id}`
         this.container.className = "bed"
@@ -30,7 +39,7 @@ class GardenBed{
             this.container.appendChild(this.elements[element])
         }
 
-        //return beddiv
+        
 
     }
 
