@@ -59,4 +59,14 @@ class GardenBed{
                 return "Unknown"
         }
     }
+
+    delete(){
+        deleteOne(BEDS_URL,this.id,(resp)=>{
+            if (resp.ok) {
+                this.container.remove()
+            }else{
+                alert("There was a problem deleting")
+            }
+        })
+    }
 }

@@ -1,5 +1,5 @@
 const BEDS_URL = "http://localhost:3000/garden_beds"
-
+let BEDS = []
 document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")
     newForm.addEventListener("submit", handleBedForm)
@@ -11,17 +11,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 function renderBeds() {
     fetchAll(BEDS_URL,(data)=>{
         data.forEach((bed)=>{
-            newBed = new GardenBed(bed)
-            newBed.elements.button.addEventListener("click",handleBedClick)
+            const newBed = new GardenBed(bed)
+            
             renderBed(newBed)
-
+            BEDS.push(newBed)
         })
     })
 }
 
 function renderBed(bed){
     const mainDiv = document.getElementById("index")
-    mainDiv.appendChild(newBed.container)
+    bed.elements.button.addEventListener("click",handleBedClick)
+    mainDiv.appendChild(bed.container)
 }
 
 function handleBedClick(event) {
