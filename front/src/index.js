@@ -12,6 +12,7 @@ function renderBeds() {
     fetchAll(BEDS_URL,(data)=>{
         data.forEach((bed)=>{
             newBed = new GardenBed(bed)
+            newBed.elements.button.addEventListener("click",handleBedClick)
             renderBed(newBed)
 
         })
@@ -19,8 +20,17 @@ function renderBeds() {
 }
 
 function renderBed(bed){
-    const mainDiv = document.getElementById("main")
+    const mainDiv = document.getElementById("index")
     mainDiv.appendChild(newBed.container)
+}
+
+function handleBedClick(event) {
+    const id = event.target.dataset.id
+    console.log(event.target)
+    fetchAll(`${BEDS_URL}/${id}`,(data)=>{
+        bed = new GardenBed(data)
+        GardenBedDetails.updateDetails(bed)
+    })
 }
 
 function handleBedForm(event) {
