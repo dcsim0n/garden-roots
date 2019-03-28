@@ -22,12 +22,21 @@ GardenBedDetails = {
         });
         this.show()
     },
+
     addPlant: function(plantName){
+        const deleteLink = document.createElement("button")
+        deleteLink.innerText = "Remove"
+        deleteLink.onclick = ()=>{alert("Are you sure?")}
+
         const li = document.createElement("li")
         li.innerHTML = plantName
+        li.append(document.createElement("br"))
+        li.append(deleteLink)
+        
         const {plants} = this.querryShow()
         plants.appendChild(li)
     },
+
     querryShow: function() {
         const card = document.getElementById("show")
         return {
@@ -38,11 +47,13 @@ GardenBedDetails = {
             graphics: card.querySelector("#graphics")
         }
     },
+
     close: function(){
         console.log("Closeing...")
         const card = document.getElementById("show")
         card.hidden = true
     },
+
     show: function () {
         const card = document.getElementById("show")
         card.hidden = false

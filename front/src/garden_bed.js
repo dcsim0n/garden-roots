@@ -8,6 +8,7 @@ class GardenBed{
             plants
         })
         this.container = document.createElement("div"),
+        
         this.elements = {
             h: document.createElement("h3"),
             sun: document.createElement("p"),
@@ -27,7 +28,9 @@ class GardenBed{
         this.elements.button.dataset.id = this.id
 
         //Maybe display number of plants
-        //this.elements.numOfPlants.innerHTML 
+        //This requires a change in the API to return
+        //BedPlants with the get /garden_beds/index route
+        //this.elements.numOfPlants.innerHTML = this.plants.length
 
         this.container.id = `garden-bed-${this.id}`
         this.container.className = "bed"
