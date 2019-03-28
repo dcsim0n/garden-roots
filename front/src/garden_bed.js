@@ -11,13 +11,16 @@ class GardenBed{
             h: document.createElement("h3"),
             sun: document.createElement("p"),
             soil: document.createElement("p"),
-            numOfPlants: document.createElement("p")
+            numOfPlants: document.createElement("p"),
+            button: document.createElement("button")
         }
         
-        
+        //Configure elements here
         this.elements.h.innerHTML = this.name
         this.elements.sun.innerHTML = this.sun_str
         this.elements.soil.innerHTML = this.soil_str
+        this.elements.button.innerText = "View Details"
+        this.elements.button.dataset.id = this.id
         //this.elements.numOfPlants.innerHTML 
 
         this.container.id = `garden-bed-${this.id}`
@@ -55,9 +58,5 @@ class GardenBed{
             default:
                 return "Unknown"
         }
-    }
-
-    get bedDiv(){
-        
     }
 }
