@@ -1,11 +1,12 @@
 const BEDS_URL = "http://localhost:3000/garden_beds"
+const PLANTS_URL = "http://localhost:3000/plants"
 let BEDS = []
 document.addEventListener("DOMContentLoaded",()=>{
     const newForm = document.getElementById("new-form")
     newForm.addEventListener("submit", handleBedForm)
 
     renderBeds()
-
+    renderAllPlants()
 })
 
 function renderBeds() {

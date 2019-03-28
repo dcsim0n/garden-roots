@@ -11,23 +11,44 @@ class Plant {
         this.height = height
         this.color = color
     }
-
-    get plantSuggestions() {
-        const plantSuggestions = document.getElementsById("new-suggestions")
-        const newPlantSuggestions = document.createElement("ul")
-        const plantList = doucment.createElement("li")
-            
-        plantSuggestions.appendChild(newPlantSuggestions)
-        newPlantSuggestions.appendChild(plantList)
-
-        plantSuggestions.id = `${this.id}`
-
-        return plantSuggestions
-    }
-
-    //fetch to suggest route - bed id
-        // garden/beds/id
 }
 
-// -plant class to get innerHTML to load
-// -displays suggestion
+    function renderAllPlants() {
+        fetch(PLANTS_URL)
+        .then(res => res.json())
+        .then(data => data.map(plant => renderPlant(plant.name, plant.color, plant.img, plant.id)))
+    }
+
+     function renderPlant() {
+        let getPlants = document.getElementById("plants-button")
+        getPlants.addEventListener("click", fetchAll(PLANTS_URL))
+        //map over to return plants that match soil/sun conditions
+
+        let plantsUl = document.getElementById("plants-ul")
+            const li = document.createElement("li")
+            plantsUl.appendChild(li)
+    }
+
+    function handlePlantForm(event) {
+        event.preventDefault()
+        const plantName = event.target.elements["name"].value
+        const plantColor = event.target.elements["color"].value
+        const plantURL = event.target.elements["image"].value
+
+        const newplant = {
+            name: plantName,
+            color: plantColor,
+            img: plantURL}
+
+        renderPlant(plantName, plantColor, plantURL)
+
+        fetch(PLANTS_URL, {
+            headers:{
+                'Content-Type' : 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify(newplant)
+        })
+        
+    }
+
