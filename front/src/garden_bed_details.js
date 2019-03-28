@@ -66,5 +66,6 @@ GardenBedDetails = {
     show: function () {
         const card = document.getElementById("show")
         card.hidden = false
+        $('.ui.modal').modal('show')
     }
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Garden Roots Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <script src="src/fetch.js"></script>
     <script src="src/garden_bed.js"></script>
     <script src="src/garden_bed_details.js"></script>
@@ -17,8 +18,8 @@
         <!-- Garden Beds list goes here -->
     
     </div>
-    <div id="show" hidden>
-            <button class="close" onclick="GardenBedDetails.close()">Close</button>
+    <div id="show" class="ui modal">
+            
             <h1>Title</h1>
             <div id="details">
                 <h3>Bed Details</h3>
@@ -59,5 +60,10 @@
         </form>
     </div>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
 </body>
 </html>
