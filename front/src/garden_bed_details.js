@@ -5,15 +5,24 @@ GardenBedDetails = {
         card = this.querryShow()
         card.title.innerHTML = bedObj.name
 
+        //Reset details
         card.details.innerHTML = ""
+
+        //create soil element
         const soil = document.createElement("li") 
         soil.innerHTML = `Soil Type: ${bedObj.soil_str}`
         card.details.appendChild(soil)
         
+        //Create Sun element
         const sun = document.createElement("li") 
         sun.innerHTML = `Light Condition: ${bedObj.sun_str}`
         card.details.appendChild(sun)
 
+        card.suggestionsButton.dataset.id = bedObj.id
+        card.suggestionsButton.addEventListener("click", this.showSuggests)
+        
+        $('.suggest.modal')
+            .modal('attach events', '.show.modal .button')
         //Iterate over the plants array
         //and add a list item for each one
         card.plants.innerHTML = ""
@@ -57,14 +66,27 @@ GardenBedDetails = {
         }
     },
 
-    close: function(){
-        console.log("Closeing...")
-        const card = document.getElementById("show")
-        card.hidden = true
+    // close: function(){
+    //     console.log("Closeing...")
+    //     const card = document.getElementById("show")
+    //     card.hidden = true
+    // },
+    showSuggests: function (event) {
+        const bedId = event.target.dataset.id
+        const suggestList = document.getElementById("suggestions")
+        suggestList.innerHTML= ""
+        fetchAll(`${SUGGEST_URL}/${bedId}`,(data)=>{
+            data.forEach((plant)=>{
+                const li = document.createElement("li")
+                li.innerHTML = plant.name
+                suggestList.appendChild(li)
+            })
+        })
     },
 
     show: function () {
         const card = document.getElementById("show")
         card.hidden = false
+        $('.fullscreen.modal.show').modal('show')
     }
 }

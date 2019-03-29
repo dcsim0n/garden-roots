@@ -6,58 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Garden Roots Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <script src="src/fetch.js"></script>
     <script src="src/garden_bed.js"></script>
     <script src="src/garden_bed_details.js"></script>
     <script src="src/index.js"></script>
 </head>
 <body>
-    <div id = "main">
-    <div id= "index">
-        <!-- Garden Beds list goes here -->
-    
-    </div>
-    <div id="show" hidden>
-            <button class="close" onclick="GardenBedDetails.close()">Close</button>
-            <h1>Title</h1>
-            <div id="details">
-                <h3>Bed Details</h3>
-                <ul>
-    
-                </ul>
+    <div id = "main" class="ui container">
+        <h1 class="ui dividing header">Garden Roots</h1>
+        <div class="ui grid">
+            <div class="ten wide column">
+                <div id= "index" class="ui three column grid ">
+                <!-- Garden Beds list goes here -->
+            
+                </div>
             </div>
-            <div id="plants">
-                <h3>Plants</h3>
-                <ul>
+                <div class="right floated three wide column"><h2 class="">Design your Garden Bed</h2>
+                    <form action="#" method="get" id="new-form">
+                        <label for="name">Describe your Flower Bed:</label> <br>
+                        <input type="text" name="name" id="name"> <br>
+                        <label for="sun">How much sun does it get?</label> <br>
+                        <select name="sun" id="sunlight"> <br>
+                            <option value="5">Full Sun</option>
+                            <option value="3">Partly Sunny</option>
+                            <option value="1">Fully Shaded</option>
+                        </select> <br>
+                        <label for="soil">What type of soil?</label> <br>
+                        <select name="soil" id="soil">
+                            <option value="5">Clay Like</option>
+                            <option value="3">Top Soil</option>
+                            <option value="1">Sandy Soil</option>
+                        </select> <br> <br>
+                        <input type="submit" value="Create New Bed">
+                    </form>
+                </div>
+        </div>
+        <div id="new-bed" class="ui grid">
+            
+        </div>
+        <div id="show" class="ui coupled fullscreen modal show">
+                
+                <h1>Title</h1>
+                <div id="details">
+                    <h3>Bed Details</h3>
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div id="plants">
+                    <h3>Plants</h3>
+                    <ul>
 
-                </ul>
-                <button>View Suggestions</button>
-            </div>
-            <div id="graphics">
-                <p>Some graphics here</p>
-                <img src="img/tulip.png" width=100, height=100 />
-            </div>
+                    </ul>
+                    <button class="ui button">View Suggestions</button>
+                </div>
+                <div id="graphics">
+                    <p>Some graphics here</p>
+                    <img src="img/tulip.png" width=100, height=100 />
+                </div>
+                <div class="ui coupled modal suggest" >
+                        <h1>Suggested plants</h1>
+                        <ul id="suggestions">
+
+                        </ul>
+                    </div>
 
         </div>
-    <div id="new-bed">
-        <form action="#" method="get" id="new-form">
-            <label for="name">Describe your Flower Bed:</label> <br>
-            <input type="text" name="name" id="name"> <br>
-            <label for="sun">How much sun does it get?</label> <br>
-            <select name="sun" id="sunlight"> <br>
-                <option value="5">Full Sun</option>
-                <option value="3">Partly Sunny</option>
-                <option value="1">Fully Shaded</option>
-            </select> <br>
-            <label for="soil">What type of soil?</label> <br>
-            <select name="soil" id="soil">
-                <option value="5">Clay Like</option>
-                <option value="3">Top Soil</option>
-                <option value="1">Sandy Soil</option>
-            </select> <br>
-            <input type="submit" value="Create New Bed">
-        </form>
+        
     </div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="semantic/dist/semantic.min.js"></script>
 </body>
 </html>
