@@ -2,7 +2,8 @@ const GardenBedDetails = {
 
     updateDetails: function(bedObj) {
         console.log(bedObj)
-        card = this.querryShow()
+        console.log("updating",bedObj.id)
+        const card = this.querryShow()
         card.title.innerHTML = bedObj.name
 
         //Reset details
@@ -29,6 +30,8 @@ const GardenBedDetails = {
         bedObj.plants.forEach(plant => {
             this.addPlant(plant)
         });
+
+        console.log("Button id is..",card.suggestionsButton.dataset.id)
         this.show()
     },
 
@@ -53,7 +56,7 @@ const GardenBedDetails = {
             title: card.querySelector("h1"),
             details: card.querySelector("#details ul"),
             plants: card.querySelector("#plants ul"),
-            suggestionsButton: card.querySelector("#plants button"),
+            suggestionsButton: card.querySelector("#suggest-button"),
             graphics: card.querySelector("#graphics")
         }
     },
@@ -74,8 +77,6 @@ const GardenBedDetails = {
     
 
     show: function () {
-        const card = document.getElementById("show")
-        card.hidden = false
         $('.fullscreen.modal.show').modal('show')
     }
 }

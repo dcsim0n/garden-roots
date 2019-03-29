@@ -1,5 +1,6 @@
 const BEDS_URL = "http://localhost:3000/garden_beds"
 const SUGGEST_URL = "http://localhost:3000/suggest"
+const BEDPLANT_URL = "http://localhost:3000/bed_plants"
 
 let BEDS = []
 document.addEventListener("DOMContentLoaded",()=>{
@@ -34,7 +35,7 @@ function handleBedClick(event) {
     const id = event.target.dataset.id
     console.log(event.target)
     fetchAll(`${BEDS_URL}/${id}`,(data)=>{
-        bed = new GardenBed(data)
+        const bed = new GardenBed(data)
         GardenBedDetails.updateDetails(bed)
     })
 }
