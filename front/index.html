@@ -15,39 +15,43 @@
 <body>
     <div id = "main" class="ui container">
         <h1 class="ui dividing header">Garden Roots</h1>
-        <div id= "index" class="ui column grid container">
-        <!-- Garden Beds list goes here -->
-    
+        <div class="ui grid">
+            <div class="ten wide column">
+                <div id= "index" class="ui three column grid ">
+                <!-- Garden Beds list goes here -->
+            
+                </div>
+            </div>
+                <div class="right floated three wide column"><h2 class="">Design your Garden Bed</h2>
+                    <form action="#" method="get" id="new-form">
+                        <label for="name">Describe your Flower Bed:</label> <br>
+                        <input type="text" name="name" id="name"> <br>
+                        <label for="sun">How much sun does it get?</label> <br>
+                        <select name="sun" id="sunlight"> <br>
+                            <option value="5">Full Sun</option>
+                            <option value="3">Partly Sunny</option>
+                            <option value="1">Fully Shaded</option>
+                        </select> <br>
+                        <label for="soil">What type of soil?</label> <br>
+                        <select name="soil" id="soil">
+                            <option value="5">Clay Like</option>
+                            <option value="3">Top Soil</option>
+                            <option value="1">Sandy Soil</option>
+                        </select> <br> <br>
+                        <input type="submit" value="Create New Bed">
+                    </form>
+                </div>
         </div>
-    
-        
-        <div id="new-bed">
-            <h2 class="ui dividing header">Design your Garden Bed</h2>
-            <form action="#" method="get" id="new-form">
-                <label for="name">Describe your Flower Bed:</label> <br>
-                <input type="text" name="name" id="name"> <br>
-                <label for="sun">How much sun does it get?</label> <br>
-                <select name="sun" id="sunlight"> <br>
-                    <option value="5">Full Sun</option>
-                    <option value="3">Partly Sunny</option>
-                    <option value="1">Fully Shaded</option>
-                </select> <br>
-                <label for="soil">What type of soil?</label> <br>
-                <select name="soil" id="soil">
-                    <option value="5">Clay Like</option>
-                    <option value="3">Top Soil</option>
-                    <option value="1">Sandy Soil</option>
-                </select> <br>
-                <input type="submit" value="Create New Bed">
-            </form>
+        <div id="new-bed" class="ui grid">
+            
         </div>
-        <div id="show" class="ui modal">
+        <div id="show" class="ui coupled fullscreen modal show">
                 
                 <h1>Title</h1>
                 <div id="details">
                     <h3>Bed Details</h3>
                     <ul>
-        
+                        
                     </ul>
                 </div>
                 <div id="plants">
@@ -55,19 +59,23 @@
                     <ul>
 
                     </ul>
-                    <button>View Suggestions</button>
+                    <button class="ui button">View Suggestions</button>
                 </div>
                 <div id="graphics">
                     <p>Some graphics here</p>
                     <img src="img/tulip.png" width=100, height=100 />
                 </div>
+                <div class="ui coupled modal suggest" >
+                        <h1>Suggested plants</h1>
+                        <ul id="suggestions">
+
+                        </ul>
+                    </div>
 
         </div>
+        
     </div>
-    <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="semantic/dist/semantic.min.js"></script>
 </body>
 </html>

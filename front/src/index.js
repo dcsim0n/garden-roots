@@ -1,4 +1,5 @@
 const BEDS_URL = "http://localhost:3000/garden_beds"
+const SUGGEST_URL = "http://localhost:3000/suggest"
 
 let BEDS = []
 document.addEventListener("DOMContentLoaded",()=>{
@@ -6,6 +7,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     newForm.addEventListener("submit", handleBedForm)
 
     renderBeds()
+
+    //enable multiple modal displays
+    $(".coupled.modal").modal({allowMultiple: true})
 
 })
 

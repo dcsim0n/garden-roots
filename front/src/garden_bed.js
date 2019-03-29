@@ -25,6 +25,7 @@ class GardenBed{
         this.elements.soil.innerHTML = this.soil_str
 
         this.elements.button.innerText = "View Details"
+        this.elements.button.className = "ui button"
         this.elements.button.dataset.id = this.id
 
         //Maybe display number of plants
@@ -33,8 +34,7 @@ class GardenBed{
         //this.elements.numOfPlants.innerHTML = this.plants.length
 
         this.container.id = `garden-bed-${this.id}`
-        this.container.className = "bed"
-
+        this.container.className = "column"
         for(let element in this.elements){
             this.container.appendChild(this.elements[element])
         }
@@ -59,11 +59,11 @@ class GardenBed{
     get soil_str(){
         switch (this.soil) {
             case 1:
-                return "Sandy"
+                return "Sandy Soil"
             case 3:
                 return "Top Soil"
             case 5:
-                return "Clay"
+                return "Clay Soil"
             default:
                 return "Unknown"
         }
