@@ -1,4 +1,4 @@
-GardenBedDetails = {
+const GardenBedDetails = {
 
     updateDetails: function(bedObj) {
         console.log(bedObj)
@@ -19,7 +19,7 @@ GardenBedDetails = {
         card.details.appendChild(sun)
 
         card.suggestionsButton.dataset.id = bedObj.id
-        card.suggestionsButton.addEventListener("click", this.showSuggests)
+        card.suggestionsButton.addEventListener("click", SuggestedPlants.showSuggests)
         
         $('.suggest.modal')
             .modal('attach events', '.show.modal .button')
@@ -71,18 +71,7 @@ GardenBedDetails = {
     //     const card = document.getElementById("show")
     //     card.hidden = true
     // },
-    showSuggests: function (event) {
-        const bedId = event.target.dataset.id
-        const suggestList = document.getElementById("suggestions")
-        suggestList.innerHTML= ""
-        fetchAll(`${SUGGEST_URL}/${bedId}`,(data)=>{
-            data.forEach((plant)=>{
-                const li = document.createElement("li")
-                li.innerHTML = plant.name
-                suggestList.appendChild(li)
-            })
-        })
-    },
+    
 
     show: function () {
         const card = document.getElementById("show")
