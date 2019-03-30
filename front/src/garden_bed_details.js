@@ -1,8 +1,9 @@
-GardenBedDetails = {
+const GardenBedDetails = {
 
     updateDetails: function(bedObj) {
         console.log(bedObj)
-        card = this.querryShow()
+        console.log("updating",bedObj.id)
+        const card = this.querryShow()
         card.title.innerHTML = bedObj.name
 
         //Reset details
@@ -19,7 +20,7 @@ GardenBedDetails = {
         card.details.appendChild(sun)
 
         card.suggestionsButton.dataset.id = bedObj.id
-        card.suggestionsButton.addEventListener("click", this.showSuggests)
+        card.suggestionsButton.addEventListener("click", SuggestedPlants.showSuggests)
         
         $('.suggest.modal')
             .modal('attach events', '.show.modal .button')
@@ -29,6 +30,8 @@ GardenBedDetails = {
         bedObj.plants.forEach(plant => {
             this.addPlant(plant)
         });
+
+        console.log("Button id is..",card.suggestionsButton.dataset.id)
         this.show()
     },
 
@@ -53,7 +56,7 @@ GardenBedDetails = {
             title: card.querySelector("h1"),
             details: card.querySelector("#details ul"),
             plants: card.querySelector("#plants ul"),
-            suggestionsButton: card.querySelector("#plants button"),
+            suggestionsButton: card.querySelector("#suggest-button"),
             graphics: card.querySelector("#graphics")
         }
     },
@@ -71,22 +74,9 @@ GardenBedDetails = {
     //     const card = document.getElementById("show")
     //     card.hidden = true
     // },
-    showSuggests: function (event) {
-        const bedId = event.target.dataset.id
-        const suggestList = document.getElementById("suggestions")
-        suggestList.innerHTML= ""
-        fetchAll(`${SUGGEST_URL}/${bedId}`,(data)=>{
-            data.forEach((plant)=>{
-                const li = document.createElement("li")
-                li.innerHTML = plant.name
-                suggestList.appendChild(li)
-            })
-        })
-    },
+    
 
     show: function () {
-        const card = document.getElementById("show")
-        card.hidden = false
         $('.fullscreen.modal.show').modal('show')
     }
 }

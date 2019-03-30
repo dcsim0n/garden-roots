@@ -10,6 +10,7 @@
     <script src="src/fetch.js"></script>
     <script src="src/garden_bed.js"></script>
     <script src="src/garden_bed_details.js"></script>
+    <script src="src/suggested_plants.js"></script>
     <script src="src/index.js"></script>
 </head>
 <body>
@@ -59,17 +60,28 @@
                     <ul>
 
                     </ul>
-                    <button class="ui button">View Suggestions</button>
+                    <button id="suggest-button" class="ui button">View Suggestions</button>
                 </div>
                 <div id="graphics">
                     <p>Some graphics here</p>
                     <img src="img/tulip.png" width=100, height=100 />
                 </div>
                 <div class="ui coupled modal suggest" >
-                        <h1>Suggested plants</h1>
-                        <ul id="suggestions">
+                        <div class="header">
+                            <h1>Suggested plants</h1>
+                        </div>
+                        <div class="scrolling content">
+                            <div class="ui one column grid" id="suggestions">
+                                <div class="column">
+                                    <h4>Plant Name</h4>
+                                    <img class="ui small right floated image" />
+                                    <ul>
 
-                        </ul>
+                                    </ul>
+                                    <button class="ui button">Plant This</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
         </div>
